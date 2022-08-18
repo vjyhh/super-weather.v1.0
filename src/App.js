@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import "./App.css";
 
 function App() {
+  let apiKey = "2e0076240708b84af82214022fa3d888";
+
+  let city = "Moscow";
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+
+  axios.get(url).then((res) => {
+    document.querySelector(".city").innerHTML = res.data.name;
+    document.querySelector(".temp").innerHTML = res.data.main.temp;
+    document.querySelector(".humidity").innerHTML = res.data.main.humidity;
+    document.querySelector(".wind").innerHTML = res.data.wind.speed;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="weather">
+      <h2>
+        Погода в городе <span class="city"></span>
+      </h2>
+      <p>
+        Погода: <span class="temp"></span>°C
+      </p>
+      <p>
+        Влажность: <span class="humidity"></span>%
+      </p>
+      <p>
+        Ветер: <span class="wind"></span> км/ч
+      </p>
     </div>
   );
 }
