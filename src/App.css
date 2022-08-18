@@ -1,44 +1,85 @@
-/* . {
-  height: 100vh;
-  background-color: rgb(25, 216, 152);
-  width: 100px;
-  height: 100px;
-} */
-
 .weather {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .headerMenu {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  top: 0;
-  margin-top: 5px;
-  width: 100%;
+    background-color: #008cba;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    width: 100%;
 }
 .searchCity {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 .inputCityName {
-  border-radius: 10px;
+    box-shadow: 0 0 3px #1670be;
+    outline-offset: 0px;
+    outline: none;
+    border-radius: 10px;
+    border-width: 0px;
 }
 .searchButton {
-  margin-left: 5px;
-  padding: 1px 10px;
-  align-self: column;
-  color: black;
-  border: 2px solid #008cba;
-  border-radius: 5px;
-  background-color: white;
+    margin-left: 5px;
+    padding: 1px 10px;
+    align-self: column;
+    color: black;
+    border: 2px solid #008cba;
+    border-radius: 5px;
+    background-color: white;
 
-  transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 .searchButton:hover {
-  background-color: #008cba;
-  color: white;
+    background-color: #008cba;
+    color: white;
+}
+.weatherList {
+    flex-direction: column;
+}
+.temp {
+}
+.temperature {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.humidityWind {
+    display: flex;
+
+    align-items: center;
+    flex-direction: row;
+}
+.humidity {
+}
+.windSpeed {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.tab {
+    margin-left: 10px;
+}
+
+.darkTheme {
+    display: flex;
+
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    box-shadow: 0 0 3px #1670be;
+    outline-offset: 0px;
+    outline: none;
+    border-radius: 40px;
+    background-color: rgb(217, 217, 217);
+    transition-duration: '0.4s';
 }
