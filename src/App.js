@@ -9,7 +9,9 @@ function App() {
 
   axios.get(url).then((res) => {
     document.querySelector(".city").innerHTML = res.data.name;
+
     document.querySelector(".temp").innerHTML = res.data.main.temp;
+
     document.querySelector(".humidity").innerHTML = res.data.main.humidity;
     document.querySelector(".wind").innerHTML = res.data.wind.speed;
   });
