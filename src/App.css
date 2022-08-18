@@ -12,16 +12,23 @@
   align-items: center;
   flex-direction: column;
 }
+.headerMenu {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  margin-top: 5px;
+  width: 100%;
+}
 .searchCity {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
 }
 .inputCityName {
   border-radius: 10px;
 }
 .searchButton {
-  margin-top: 3px;
+  margin-left: 5px;
   padding: 1px 10px;
   align-self: column;
   color: black;
