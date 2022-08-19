@@ -13,7 +13,7 @@ function App() {
     const [wind, setWind] = useState();
     const [inputCity, setInputCity] = useState();
     const [showDivCity, setShowDivCity] = useState(false);
-    const [da1, da2] = useState({
+    const [displayTheme, chooseTheme] = useState({
         backgroundColor: 'black',
     });
 
@@ -22,6 +22,17 @@ function App() {
     return (
         <div className='weather'>
             <div className='headerMenu day night'>
+                <div
+                    className='darkTheme'
+                    style={displayTheme}
+                    onClick={() => {
+                        if (displayTheme.backgroundColor === 'white') {
+                            chooseTheme({ backgroundColor: 'black' });
+                        } else {
+                            chooseTheme({ backgroundColor: 'white' });
+                        }
+                    }}
+                ></div>
                 <div className='searchCity'>
                     <input
                         type='text'
@@ -73,17 +84,6 @@ function App() {
             ) : (
                 <div></div>
             )}
-            <div
-                className='darkTheme'
-                style={da1}
-                onClick={() => {
-                    if (da1.backgroundColor === 'red') {
-                        da2({ backgroundColor: 'black' });
-                    } else {
-                        da2({ backgroundColor: 'red' });
-                    }
-                }}
-            ></div>
         </div>
     );
 }
